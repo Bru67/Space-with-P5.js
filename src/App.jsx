@@ -8,7 +8,7 @@ export default function P5Sketch() {
   const velocity = useRef();
   const speed = 0.5;
   const changeRotationTimer = useRef(0);
-  const changeInterval = useRef(120);
+  const changeInterval = useRef(170);
   const floatingGuy = useRef();
 
   const bgImage = useRef({
@@ -70,6 +70,7 @@ const draw = (p5) => {
     currentBg.current = "top";
   }
 
+  // mudança de posição
   changeRotationTimer.current++;
   if (changeRotationTimer.current > changeInterval.current) {
     if (p5.random(1) < 0.5) {
